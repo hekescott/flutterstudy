@@ -8,9 +8,12 @@ import 'day02/TapboxA.dart';
 import 'day02/cupinfo.dart';
 import 'day03/ButtonDemo.dart';
 import 'day03/ImageDemo.dart';
+import 'day03/ProgressIndicatorDemo.dart';
 import 'day03/SwitchAndCheckBoxDemo.dart';
 import 'day03/TextFieldDemo.dart';
+import 'day03/TextFieldFormDemo.dart';
 import 'day03/TextStyles.dart';
+import 'day04/LayoutDemo.dart';
 import 'demo1.dart';
 
 import 'maintwo.dart';
@@ -104,23 +107,37 @@ class _MyHomePageState extends State<MyHomePage> {
           OutlineButton(
             child: Text("Widget状态管理"),
             onPressed: _jumpWidgetManageSelfSate,
-          ),   OutlineButton(
+          ),
+          OutlineButton(
             child: Text("txt样式"),
             onPressed: _jumpWidgetTextSytles,
           ),
           OutlineButton(
             child: Text("按钮demo"),
             onPressed: _jumpButton,
-          ),  OutlineButton(
+          ),
+          OutlineButton(
             child: Text("Imagedemo"),
             onPressed: _jumpImage,
           ),
           OutlineButton(
             child: Text("复选框"),
             onPressed: _jumpCheckbox,
-          ),  OutlineButton(
+          ),
+          OutlineButton(
             child: Text("输入框"),
             onPressed: _jumpTextField,
+          ),
+          OutlineButton(
+            child: Text("Form表单"),
+            onPressed: _jumpTextFieldFormDemo,
+          ),
+          OutlineButton(
+            child: Text("指示器"),
+            onPressed: _jumpProgressIndicatorDemo,
+          ),          OutlineButton(
+            child: Text("布局"),
+            onPressed: _jumpLayoutDemo,
           ),
         ],
       ),
@@ -162,27 +179,49 @@ class _MyHomePageState extends State<MyHomePage> {
       return ManageState();
     }));
   }
+
   _jumpWidgetTextSytles() {
     Navigator.push(context, new MaterialPageRoute(builder: (context) {
       return TextSytles();
     }));
   }
+
   _jumpButton() {
     Navigator.push(context, new MaterialPageRoute(builder: (context) {
       return ButtonDemo();
     }));
-  }  _jumpImage() {
+  }
+
+  _jumpImage() {
     Navigator.push(context, new MaterialPageRoute(builder: (context) {
       return ImageDemo();
     }));
   }
+
   _jumpCheckbox() {
     Navigator.push(context, new MaterialPageRoute(builder: (context) {
       return SwitchAndCheckBoxDemo();
     }));
-  }  _jumpTextField() {
+  }
+
+  _jumpTextField() {
     Navigator.push(context, new MaterialPageRoute(builder: (context) {
       return TextFieldDemo();
+    }));
+  }
+
+  _jumpTextFieldFormDemo() {
+    Navigator.push(context, new MaterialPageRoute(builder: (context) {
+      return TextFieldFormDemo();
+    }));
+  }  _jumpProgressIndicatorDemo() {
+    Navigator.push(context, new MaterialPageRoute(builder: (context) {
+      return ProgressIndicatorDemo();
+    }));
+  }
+  _jumpLayoutDemo() {
+    Navigator.push(context, new MaterialPageRoute(builder: (context) {
+      return LayoutDemo();
     }));
   }
 }

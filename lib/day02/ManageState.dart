@@ -32,7 +32,6 @@ class _ManageState extends State<ManageState> {
          child: SingleChildScrollView(
 
             child: Padding(
-
                 padding: EdgeInsetsDirectional.only(
                     top: ScreenUtil.getInstance().setWidth(20),
                     start: ScreenUtil.getInstance().setWidth(20)),
@@ -45,7 +44,12 @@ class _ManageState extends State<ManageState> {
                     ParentWidget(),
                     Text("混合状态管理"),
                     ParentWidgetC(),
-
+                    Text("自身管理"),
+                    TapboxA(),
+                    Text("父Widget管理子Widget的状态"),
+                    ParentWidget(),
+                    Text("混合状态管理"),
+                    ParentWidgetC(),
                   ],
                 )
             )
