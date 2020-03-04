@@ -29,32 +29,29 @@ class _ManageState extends State<ManageState> {
           title: Text("状态管理"),
         ),
         body: Scrollbar(
-         child: SingleChildScrollView(
-
-            child: Padding(
-                padding: EdgeInsetsDirectional.only(
-                    top: ScreenUtil.getInstance().setWidth(20),
-                    start: ScreenUtil.getInstance().setWidth(20)),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text("自身管理"),
-                    TapboxA(),
-                    Text("父Widget管理子Widget的状态"),
-                    ParentWidget(),
-                    Text("混合状态管理"),
-                    ParentWidgetC(),
-                    Text("自身管理"),
-                    TapboxA(),
-                    Text("父Widget管理子Widget的状态"),
-                    ParentWidget(),
-                    Text("混合状态管理"),
-                    ParentWidgetC(),
-                  ],
-                )
-            )
-        )
-        )
-    );
+            child: SingleChildScrollView(
+                child: Padding(
+                    padding: EdgeInsetsDirectional.only(
+                        top: ScreenUtil.getInstance().setWidth(20),
+                        start: ScreenUtil.getInstance().setWidth(20)),
+                    child: ConstrainedBox(
+                        constraints: BoxConstraints(minWidth: double.infinity),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Text("自身管理"),
+                            TapboxA(),
+                            Text("父Widget管理子Widget的状态"),
+                            ParentWidget(),
+                            Text("混合状态管理"),
+                            ParentWidgetC(),
+                            Text("自身管理"),
+                            TapboxA(),
+                            Text("父Widget管理子Widget的状态"),
+                            ParentWidget(),
+                            Text("混合状态管理"),
+                            ParentWidgetC(),
+                          ],
+                        ))))));
   }
 }
