@@ -14,6 +14,7 @@ import 'day03/TextFieldDemo.dart';
 import 'day03/TextFieldFormDemo.dart';
 import 'day03/TextStyles.dart';
 import 'day04/LayoutDemo.dart';
+import 'day05/ConstainterMainLayout.dart';
 import 'demo1.dart';
 
 import 'maintwo.dart';
@@ -135,9 +136,13 @@ class _MyHomePageState extends State<MyHomePage> {
           OutlineButton(
             child: Text("指示器"),
             onPressed: _jumpProgressIndicatorDemo,
-          ),          OutlineButton(
+          ),
+          OutlineButton(
             child: Text("布局"),
             onPressed: _jumpLayoutDemo,
+          ),     OutlineButton(
+            child: Text("容器"),
+            onPressed: _jumpConstainterDemo,
           ),
         ],
       ),
@@ -214,14 +219,21 @@ class _MyHomePageState extends State<MyHomePage> {
     Navigator.push(context, new MaterialPageRoute(builder: (context) {
       return TextFieldFormDemo();
     }));
-  }  _jumpProgressIndicatorDemo() {
+  }
+
+  _jumpProgressIndicatorDemo() {
     Navigator.push(context, new MaterialPageRoute(builder: (context) {
       return ProgressIndicatorDemo();
     }));
   }
+
   _jumpLayoutDemo() {
     Navigator.push(context, new MaterialPageRoute(builder: (context) {
       return LayoutDemo();
+    }));
+  }  _jumpConstainterDemo() {
+    Navigator.push(context, new MaterialPageRoute(builder: (context) {
+      return ConstainterDemo();
     }));
   }
 }

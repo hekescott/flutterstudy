@@ -7,11 +7,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/uitl/screenutil.dart';
 
+import 'AlignDemo.dart';
 import 'ColumnDemo.dart';
 import 'ColumnDemo2.dart';
 import 'FlexDemo.dart';
 import 'FlowDemo.dart';
 import 'RowDemo.dart';
+import 'StackDemo.dart';
 import 'WrapDemo.dart';
 
 class LayoutDemo extends StatefulWidget {
@@ -65,6 +67,14 @@ class _LayoutDemoState extends State<LayoutDemo> {
                           child: Text("流式布局Flow"),
                           onPressed: _jumpFlowDemo,
                         ),
+                        OutlineButton(
+                          child: Text("stack"),
+                          onPressed: _jumpStackDemo,
+                        ),
+                        OutlineButton(
+                          child: Text("AlignDemo"),
+                          onPressed: _jumpAlignDemo,
+                        ),
                       ],
                     )))));
   }
@@ -106,6 +116,18 @@ class _LayoutDemoState extends State<LayoutDemo> {
   }  _jumpFlowDemo() {
     Navigator.push(context, new MaterialPageRoute(builder: (context) {
       return FlowDemo();
+    }));
+  }
+
+  _jumpStackDemo() {
+    Navigator.push(context, new MaterialPageRoute(builder: (context) {
+      return StackDemo();
+    }));
+  }
+
+  _jumpAlignDemo() {
+    Navigator.push(context, new MaterialPageRoute(builder: (context) {
+      return AlignDemo();
     }));
   }
 }
